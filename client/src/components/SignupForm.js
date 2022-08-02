@@ -21,6 +21,7 @@ const SignupForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log(userFormData);
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -30,10 +31,9 @@ const SignupForm = () => {
     try {
       const response = await addUser({
         variables: {
+          username: userFormData.username,
           email: userFormData.email,
           password: userFormData.password,
-          firstName: userFormData.firstName,
-          lastName: userFormData.lastName,
         },
       });
 
