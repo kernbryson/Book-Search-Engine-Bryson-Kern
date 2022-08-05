@@ -9,7 +9,6 @@ import {
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import { currentUserQuery } from "../utils/queries";
 import { REMOVE_BOOK } from "../utils/mutations";
-import { REMOVE_BOOK } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 
